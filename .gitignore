@@ -1,0 +1,19 @@
+# Build output
+/build/
+/bin/
+/*.obj
+/*.exe
+/*.dll
+/*.lib
+/*.pdb
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# VSCode settings
+.vscode/
+
+*.log
