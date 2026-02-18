@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(include)
 
 add_executable(main
-    src/main.cpp
+    tests/test_RigidBodyData.cpp
     src/RigidBody.cpp)
 
 set_target_properties(main PROPERTIES WIN32_EXECUTABLE OFF)
