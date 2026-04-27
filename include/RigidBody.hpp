@@ -9,7 +9,7 @@ public:
     struct State{
         math::Vec3 position = math::Vec3::Zero();
         math::Vec3 velocity = math::Vec3::Zero();
-        math::Quat orientation = math::Quat::Identity();
+        math::Quat quaternion = math::Quat::Identity();
         math::Vec3 angularVelocity = math::Vec3::Zero();
     };
 
@@ -27,14 +27,14 @@ public:
 
     const math::Vec3& getPosition() const;
     const math::Vec3& getVelocity() const;
-    const math::Quat& getOrientation() const;
+    const math::Quat& getQuaternion() const;
     const math::Vec3& getAngularVelocity() const;
     const double& getMass() const;
     const math::Mat3& getInertia() const;
 
     void setPosition(const math::Vec3& position);
     void setVelocity(const math::Vec3& velocity);
-    void setOrientation(const math::Quat& orientation);
+    void setQuaternion(const math::Quat& quaternion);
     void setAngularVelocity(const math::Vec3& angularVelocity);
     void setMass(const double mass);
     void setInertia(const math::Mat3& inertia);
@@ -50,6 +50,6 @@ public:
 private:
 
     void setState(const State& state);
-    void normalizeOrientation();
+    void normalizeQuaternion();
     State derivative(const State& state, const Input& u) const;
 };

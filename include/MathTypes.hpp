@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Eigen/Eigen/Dense>
+#include "eigen/Eigen/Dense"
 
 namespace math{
     using Vec3 = Eigen::Vector3d;
